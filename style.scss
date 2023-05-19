@@ -1,0 +1,241 @@
+@font-face {
+    font-weight: 400;
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+  }
+@font-face {
+    font-weight: 700;
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Bold.ttf");
+}
+
+$dark: #141414;
+$pink: #F64775;
+$gray: #B2B2B2;
+$blue: #0099FF;
+
+
+body{
+    font-family: "Roboto";
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+}
+h1,h2,h3{
+    margin: 0;
+}
+button{
+    background-color: transparent;
+    border:none;
+}
+
+.header{
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    gap: 272px;
+    padding: 19px 40px;    
+}
+.logo{
+    display: block;
+}
+.nav{
+    max-width: 1100px;
+    display: flex;
+    height: 71px;
+    justify-content: flex-start;
+    align-items:center;
+    gap: 118px;
+    &-list{
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+        list-style-type: none;
+        gap: 46px;
+        padding-bottom: 9px;
+        &__item{
+            height: 24px;
+        }
+        &__link{
+            font-size: 20px;
+            line-height: 24px;
+            color: $dark;
+            text-decoration: none;
+        }
+    }
+}
+.new::after{
+    content:"new";
+    font-size: 13px;
+    line-height: 21px;
+    margin-left: 7px;
+    margin-right: -22px;
+    color: #FFF;
+    padding: 5px 11px;
+    border-radius: 15px;
+    background-color: $pink;
+}
+.btn-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    padding-bottom: 9px;
+
+}
+.btn-login{
+    display: block;
+    box-sizing: border-box;
+    width: 97px;
+    height: 54px;
+    padding: 15px 22px 19px 22px;
+    border: 2px solid #F8F4F4;
+    border-radius: 8px;
+    text-decoration: none;
+    color: $dark;
+    text-align: center;
+}
+.btn-trial{
+    display: block;
+    box-sizing: border-box;
+    color:#FFF;
+    width: 153px;
+    height: 54px;
+    padding: 14px 20px 20px 20px;
+    background-color: #0099FF;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+}
+.container{
+    max-width: 1240px;
+    margin: auto;
+}
+.intro{
+    margin-bottom: 90px;
+}
+.title{
+    font-size: 120px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 110px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 73px;
+
+}
+.slogan{
+    font-size: 26px;
+    line-height: 36.5px;
+    text-align: center;
+    margin: 0 auto 28px;
+}
+.subcribe-form{
+    display: flex;
+    max-width: 456px;
+    margin: 0 auto 43px;
+    &__input{
+        width: 277px;
+        border: 2px solid $blue;
+        padding: 18px 10px;
+        background-color: transparent;
+    }
+    &__input::placeholder{
+        font-size: 20px;
+        line-height: 28px;
+        color: $gray;
+        vertical-align: center;
+    }
+    &__btn{
+        font-size: 20px;
+        line-height: 28px;
+        color: #FFF;
+        text-align: center;
+        vertical-align: top;
+        height: 62px;
+        border: none;
+        border-radius: 0 8px 8px 0 ;
+        background-color: $blue;
+        padding: 15px 17px 15px 15px;
+        margin: 0;
+    }
+}
+.teams{
+    max-width: 1180px;
+    margin: auto;
+    &__text{
+        font-size: 20px;
+        line-height: 28px;
+        color: $gray;
+        text-align: center;
+        margin-bottom: 9px;
+    }
+}
+.team-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0 30px;
+    &__item{
+        width: 160px;
+        height: 120px;
+        object-position: top;
+        object-fit: cover;
+    }
+}
+.presentation{
+    margin-bottom: 100px;
+}
+.presentation__title{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 56px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 0 auto 30px;
+}
+.video{
+    position: relative;
+    background-image: url('../img/video.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    max-width: 860px;
+    height: 486px;
+    margin: auto;
+    
+}
+.video>video{
+    width: 100%;
+}
+.video__controller{
+    position: absolute;
+    left: calc(0% + 250px);
+    bottom: calc(0% - 30px);
+    font-size: 18px;
+    line-height: 20px;
+    text-align: left;
+    background-color: #FFF;
+    border-radius: 40px;
+    box-shadow: 0 7px rgba(186, 193, 197, 0.2);
+    margin: auto;
+    padding: 24px 45px 26px 65px;
+    &::before{
+        content:"";
+        display: block;
+        position: absolute;
+        left: calc(0% + 22px);
+        top: calc(0% + 20px);
+        width: 30px;
+        height: 30px;
+        background-image: url('../img/play.svg');
+    }
+}
+
+

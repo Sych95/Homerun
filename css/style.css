@@ -224,9 +224,10 @@ button {
 
 .video > video {
   width: 100%;
+  height: 100%;
 }
 
-.video__controller {
+.video-control {
   position: absolute;
   left: calc(0% + 250px);
   bottom: calc(0% - 30px);
@@ -235,17 +236,20 @@ button {
   text-align: left;
   background-color: #FFF;
   border-radius: 40px;
-  box-shadow: 0 7px rgba(186, 193, 197, 0.2);
+  box-shadow: 0 7px 10px rgba(186, 193, 197, 0.2);
   margin: auto;
   padding: 24px 45px 26px 65px;
 }
-.video__controller::before {
-  content: "";
-  display: block;
+.video-control__icon {
   position: absolute;
-  left: calc(0% + 22px);
-  top: calc(0% + 20px);
   width: 30px;
   height: 30px;
-  background-image: url("../img/play.svg");
+  left: calc(0% + 20px);
+  top: calc(0% + 20px);
+}
+.video-control__btn {
+  font-size: 18px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
 }/*# sourceMappingURL=style.css.map */

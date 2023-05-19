@@ -10,9 +10,11 @@
 }
 
 $dark: #141414;
+$dark-light: #333333;
 $pink: #F64775;
 $gray: #B2B2B2;
 $blue: #0099FF;
+$gray-dark: rgba(14, 16, 22, 0.4);
 
 
 body{
@@ -26,12 +28,15 @@ ul{
 p{
     margin: 0;
 }
-h1,h2,h3{
+h1, h2, h3, h4 {
     margin: 0;
 }
 button{
     background-color: transparent;
     border:none;
+}
+a{
+    text-decoration: none;
 }
 
 .header{
@@ -190,7 +195,7 @@ button{
     }
 }
 .presentation{
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 .presentation__title{
     font-weight: 400;
@@ -241,8 +246,70 @@ button{
         text-align: left;
         vertical-align: top;
     }
-
 }
+.opportunities{
+    max-width: 1240px;
+}
+.opportunity{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1160px;
+    padding: 0 40px;
+    &__text-wrapper{
+        max-width: 430px;
+        padding-right: 13px;
+        padding-top: 39px;
+    }
+    &__name{
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 15px;
+    }
+    &__title{
+        font-size: 56px;
+        line-height: 64px;
+        letter-spacing: 2px;
+        margin: 0;
+        margin-bottom: 23px;
 
+    }
+    &__text{
+        font-size: 22px;
+        line-height: 31px;
+        margin-bottom: 40px;
+    }
+    &__link{
+        font-size: 18px;
+        font-weight: bold;
+        color: $dark-light;
+        padding: 15px 17px 19px 22px;
+        border-radius: 8px;
+        border: 2px solid #F8F4F4;
+    }
+    &__img-wrapper{
+        width: 677px;
+        padding-top: 50px;
+    }
+    &__img{
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 8px;
+    }
+    &__img-text{
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: rgba(14, 16, 22, 0.4);
+    }
+}
+.opportunity:nth-child(1){
+    margin-bottom: 157px;
+}
+.green{
+    color: #0C9F64;
+}
+.yellow{
+    color: #FEC104;
+}
 
 

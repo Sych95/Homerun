@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="./css/normalize.css" />
     <link type="image/x-icon" href="./img/favicon.svg" rel="shortcut icon" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+      <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
   </head>
   <body>
     <header class="header">
@@ -160,45 +159,52 @@
             personal.
           </p>
           <a href="#" class="join__link">About our customers</a>
-          <div class="join__slider">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="join__feedback">
-                    <img src="" alt="" />
-                    <div class="join__feedback-wrapper">
-                      <img
-                        src="./img/feedback_logo01.svg"
-                        alt=""
-                        class="join__feedback-logo"
-                      />
-                      <p class="join__feedback-text">
-                        “You don't need to be a pro in HR or even in Homerun to
-                        be able to use it. It's so easy that anyone in the team
-                        can figure it out.”
-                      </p>
-                      <div class="join__feedback-meta">
-                        <p class="author">Isabel Machielse</p>
-                        <p class="join__author-position">
-                          People & Culture Coordinator
-                        </p>
-                      </div>
-                      <a href="#" class="join__author-story"
-                        >Read customer story</a
-                      >
-                    </div>
-                  </div>
+
+
+          <div class="join__slider"> 
+            <div class="join__feedback">
+              <div class="join__person-img-wrapper">
+                <img class="join__person-img" src="./img/feedback-img01.png" alt="" />
+              </div>
+              <div class="join__feedback-wrapper">
+                <img
+                  src="./img/feedback_logo01.svg"
+                  alt=""
+                  class="join__feedback-logo"/>
+                <p class="join__feedback-text">
+                  “You don't need to be a pro in HR or even in Homerun to
+                  be able to use<br> it. It's so easy that anyone in the<br> team
+                  can figure it out.”
+                </p>
+                <div class="join__feedback-meta">
+                  <p class="author">Isabel Machielse</p>
+                  <p class="join__author-position">
+                    People & Culture Coordinator
+                  </p>
                 </div>
+                <a href="#" class="join__author-link">Read customer story</a>
               </div>
             </div>
-              <div class="swiper-pagination"></div>
-            </div>
+      
           </div>
+
+
         </div>
       </section>
     </div>
     <script src="script.js"></script>
+        <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./swiper.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>

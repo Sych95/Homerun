@@ -318,6 +318,7 @@ a{
 .join{
     max-width: 1240px;
     &__container{
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -325,6 +326,7 @@ a{
         color: #FFF;
         border-radius: 20px;
         padding-top: 70px;
+        padding-bottom: 51px;
     }
     &__logo{
         width: 80px;
@@ -358,9 +360,8 @@ a{
     }
     &__feedback{
         display: flex;
-        max-width: 1160px;
+
         padding: 0 40px 0;
-        overflow: clip;
     }
     &__person-img-wrapper{
         max-width: 580px;
@@ -379,7 +380,7 @@ a{
         border-radius: 0 20px 20px 0;
     }
     &__feedback-logo{
-        width: 129px;
+        max-width: 129px;
         margin-bottom: 39px;
     }
     &__feedback-text{
@@ -405,25 +406,30 @@ a{
 }
 
 
-// .swiper {
-//     width: 100%;
-//     height: 100%;
-//   }
 
-//   .swiper-slide {
-//     text-align: center;
-//     font-size: 18px;
-//     color: #0099FF;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
+.swiper {
+    position:relative;
+    width: 1160px;
+    margin: auto;
+    overflow: visible;
+    overflow-x: hidden;
+    
+  }
 
-//   .swiper-slide img {
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
+  .swiper-slide {
+    font-size: 18px;
+    display: flex;
+  }
+  .swiper::-webkit-scrollbar{
+    width: 0;
+  }
+
+  .swiper-pagination-bullet{
+    background-color: #FFF;
+  }
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: -35px;
+}
+
 
 

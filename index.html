@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/normalize.css" />
     <link type="image/x-icon" href="./img/favicon.svg" rel="shortcut icon" />
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="./css/style.css" />
 
   </head>
@@ -39,6 +39,27 @@
           <a href="#" class="btn-login">Log in</a>
           <a href="#" class="btn-trial">Start free trial</a>
         </div>
+      </nav>
+      <button class="burger"></button>
+      <nav class="nav-burger">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__link">Product</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__link new">Templates</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__link">Pricing</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__link">Customers</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__link">Learn</a>
+          </li>
+        </ul>
+
       </nav>
     </header>
     <div class="container">
@@ -159,7 +180,7 @@
             personal.
           </p>
           <a href="#" class="join__link">About our customers</a>
-          <!-- Swiper -->
+  
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -265,16 +286,93 @@
       </section>
 
       <footer class="footer">
-        <div class="footer__links">
-          <div class="footer__logo-wrapper">
-            <img src="./img/logo.svg" alt="" class="footer__logo">
+        <div class="footer__container">
+          <div class="footer__main-links">
+            <div class="footer__logo-wrapper">
+              <img src="./img/logo-white.svg" alt="" class="footer__logo">
+            </div>
+            <a href="#" class="footer__trial-link">Start free trial</a>
+          </div>  
+          <div class="footer__links-container">
+            <div class="footer__first-col">
+              <ul class="footer__product-links-list">
+                <h6 class="footer__links-title">Product</h6>
+                <li class="footer__links-item green bold"><a href="#" class="footer__link">Hire</a></li>
+                <li class=" footer__links-item yellow bold"><a href="#" class="footer__link">Create</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">Templates</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">All features</a></li>
+              </ul>
+              <ul class="footer__pricing-links-list">
+                <li class="footer__links-item"><a href="#" class="footer__link">Pricing</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">New in Homerun</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__second-col">
+              <h6 class="footer__links-title">Learn</h6>
+              <ul class="footer__learn-links-list">
+                <li class="footer__links-item"><a href="#" class="footer__link">Blog</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">Help Center</a></li>
+              </ul>
+              <h6 class="footer__links-title">Guides</h6>
+              <ul class="footer__learn-links-list">
+                <li class="footer__links-item"><a href="#" class="footer__link">Remote Hiring</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">Employer Branding</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">Job Interviewing</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">Diversity & Inclusion</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">Attracting Talent</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">GDPR Hiring</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__third-col">
+              <h6 class="footer__links-title">About Homerun</h6>
+              <ul class="footer__about-links-list">
+                <li class="footer__links-item"><a href="#" class="footer__link">About us</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">We're hiring</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">Contact us</a></li>
+              </ul>
+              <h6 class="footer__links-title">Legal</h6>
+              <ul class="footer__legal-links-list">
+                <li class="footer__links-item"><a href="#" class="footer__link">Terms</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">Privacy</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__fourth-col">
+              <h6 class="footer__links-title">Art of Work newsletter</h6>
+              <p class="footer__links-text">Receive must-read articles and trends on company culture, hiring and work/life balance.</p>
+              <h6 class="footer__links-title">Social media</h6>
+              <ul class="footer__social-media-list">
+                <li class="footer__social-media-item">
+                  <a href="#" class="footer__social-media-link">
+                  <img src="./img/instagram.svg" alt="" class="footer__social-media-img">
+                  </a>
+                </li>
+                <li class="footer__social-media-item">
+                  <a href="#" class="footer__social-media-link">
+                  <img src="./img/linked-in.svg" alt="" class="footer__social-media-img">
+                  </a>
+                </li>
+                <li class="footer__social-media-item">
+                  <a href="#" class="footer__social-media-link">
+                  <img src="./img/twitter.svg" alt="" class="footer__social-media-img">
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+            
+
+            </ul>
           </div>
+
         </div>
       </footer>
     </div>
     <script src="script.js"></script>
       <!-- Swiper JS -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
 
     <!-- Initialize Swiper -->
     <script src="./swiper.js"></script>

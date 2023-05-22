@@ -25,3 +25,17 @@ videoFrame.addEventListener('click',()=>{
         videoFrame.pause();
     }
 })
+
+const burgerBtn = document.querySelector('.burger');
+const burgerNav = document.querySelector('.nav-burger');
+
+burgerBtn.addEventListener('click',()=>{
+    if(!burgerNav.classList.contains('active')){
+        burgerNav.classList.add('active')
+    } else{
+        burgerNav.classList.remove('active') 
+    }
+})
+
+console.log(burgerBtn)
+console.log(burgerNav.classList.contains(''))

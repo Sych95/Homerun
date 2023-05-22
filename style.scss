@@ -841,6 +841,10 @@ font-weight: 700;
         font-size: 30px;
         line-height: 30px;
     }
+    .start__tip-list{
+        flex-direction: column;
+        gap: 10px;
+    }
     .footer__links-container{
         flex-wrap: wrap;
         padding-bottom: 20px;

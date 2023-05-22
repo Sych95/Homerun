@@ -37,5 +37,3 @@ burgerBtn.addEventListener('click',()=>{
     }
 })
 
-console.log(burgerBtn)
-console.log(burgerNav.classList.contains(''))

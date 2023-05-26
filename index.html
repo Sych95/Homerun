@@ -7,14 +7,13 @@
     <title>Homerun</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link type="image/x-icon" href="./img/favicon.svg" rel="shortcut icon" />
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="./css/style.css" />
 
   </head>
   <body>
     <header class="header">
-      <a href="#" class="logo">
+      <a href="#" class="header__logo">
         <img src="./img/logo.svg" alt="logo" class="logo-img" />
       </a>
       <nav class="nav">
@@ -40,7 +39,7 @@
           <a href="#" class="btn-trial">Start free trial</a>
         </div>
       </nav>
-      <button class="burger"></button>
+      <button class="burger burger-off"></button>
       <nav class="nav-burger">
         <ul class="nav-list">
           <li class="nav-list__item">
@@ -183,60 +182,61 @@
             personal.
           </p>
           <a href="#" class="join__link">About our customers</a>
-  
+    
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-          <div class="join__feedback">
-        <div class="join__person-img-wrapper">
-          <img class="join__person-img" src="./img/feedback-img01.png" alt="" />
-        </div>
-        <div class="join__feedback-wrapper">
-          <img
-            src="./img/feedback_logo01.svg"
-            alt=""
-            class="join__feedback-logo"/>
-          <p class="join__feedback-text">
-            “You don't need to be a pro in HR or even in Homerun to
-            be able to useit. It's so easy that anyone in the team
-            can figure it out.”
-          </p>
-          <div class="join__feedback-meta">
-            <p class="author">Isabel Machielse</p>
-            <p class="join__author-position">
-              People & Culture Coordinator
-            </p>
-          </div>
-          <a href="#" class="join__author-link">Read customer story</a>
-        </div>
-      </div>
+                <div class="join__feedback">
+                  <div class="join__person-img-wrapper">
+                  <img class="join__person-img" src="./img/feedback-img01.png" alt="" />
+                  </div>
+                  <div class="join__feedback-wrapper">
+                    <img
+                      src="./img/feedback_logo01.svg"
+                      alt=""
+                      class="join__feedback-logo"/>
+                    <p class="join__feedback-text">
+                      “You don't need to be a pro in HR or even in Homerun to
+                      be able to useit. It's so easy that anyone in the team
+                      can figure it out.”
+                    </p>
+                    <div class="join__feedback-meta">
+                      <p class="author">Isabel Machielse</p>
+                      <p class="join__author-position">
+                        People & Culture Coordinator
+                      </p>
+                    </div>
+                    <a href="#" class="join__author-link">Read customer story</a>
+                  </div>
+                </div>
               </div>
               <div class="swiper-slide">
-                    <div class="join__feedback">
-        <div class="join__person-img-wrapper">
-          <img class="join__person-img" src="./img/feedback-img02.jpg" alt="" />
-        </div>
-        <div class="join__feedback-wrapper">
-          <img
-            src="./img/feedback_logo01.svg"
-            alt=""
-            class="join__feedback-logo"/>
-          <p class="join__feedback-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsam, amet officia iste error perferendis asperiores non atque adipisci sequi quae repudiandae! Itaque quibusdam aut odit, repudiandae quo quos ea ipsa recusandae quasi similique ipsam?
-          </p>
-          <div class="join__feedback-meta">
-            <p class="author">Anna Petrova</p>
-            <p class="join__author-position">
-              Support manager
-            </p>
-          </div>
-          <a href="#" class="join__author-link">Read customer story</a>
-        </div>
-      </div>
+                <div class="join__feedback">
+                  <div class="join__person-img-wrapper">
+                    <img class="join__person-img" src="./img/feedback-img02.jpg" alt="" />
+                  </div>
+                  <div class="join__feedback-wrapper">
+                    <img
+                      src="./img/feedback_logo01.svg"
+                      alt=""
+                      class="join__feedback-logo"/>
+                    <p class="join__feedback-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsam, amet officia iste error perferendis asperiores non atque adipisci sequi quae repudiandae! Itaque quibusdam aut odit, repudiandae quo quos ea ipsa recusandae quasi similique ipsam?
+                    </p>
+                    <div class="join__feedback-meta">
+                      <p class="author">Anna Petrova</p>
+                      <p class="join__author-position">
+                        Support manager
+                      </p>
+                    </div>
+                    <a href="#" class="join__author-link">Read customer story</a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
+        </div>
       </section>
 
       <section class="templates">
@@ -299,9 +299,9 @@
           <div class="footer__links-container">
             <div class="footer__first-col">
               <ul class="footer__product-links-list">
-                <h6 class="footer__links-title">Product</h6>
-                <li class="footer__links-item green bold"><a href="#" class="footer__link">Hire</a></li>
-                <li class=" footer__links-item yellow bold"><a href="#" class="footer__link">Create</a></li>
+                <h3 class="footer__links-title">Product</h3>
+                <li class="footer__links-item green bold"><a href="#" class="footer__link green">Hire</a></li>
+                <li class=" footer__links-item yellow bold"><a href="#" class="footer__link yellow">Create</a></li>
                 <li class="footer__links-item"><a href="#" class="footer__link">Templates</a></li>
                 <li class="footer__links-item"><a href="#" class="footer__link">All features</a></li>
               </ul>
@@ -312,12 +312,12 @@
             </div>
 
             <div class="footer__second-col">
-              <h6 class="footer__links-title">Learn</h6>
+              <h3 class="footer__links-title">Learn</h3>
               <ul class="footer__learn-links-list">
                 <li class="footer__links-item"><a href="#" class="footer__link">Blog</a></li>
                 <li class="footer__links-item"><a href="#" class="footer__link">Help Center</a></li>
               </ul>
-              <h6 class="footer__links-title">Guides</h6>
+              <h3 class="footer__links-title">Guides</h3>
               <ul class="footer__learn-links-list">
                 <li class="footer__links-item"><a href="#" class="footer__link">Remote Hiring</a></li>
                 <li class="footer__links-item"><a href="#" class="footer__link">Employer Branding</a></li>
@@ -329,13 +329,13 @@
             </div>
 
             <div class="footer__third-col">
-              <h6 class="footer__links-title">About Homerun</h6>
+              <h3 class="footer__links-title">About Homerun</h3>
               <ul class="footer__about-links-list">
                 <li class="footer__links-item"><a href="#" class="footer__link">About us</a></li>
                 <li class="footer__links-item"><a href="#" class="footer__link">We're hiring</a></li>
                 <li class="footer__links-item"><a href="#" class="footer__link">Contact us</a></li>
               </ul>
-              <h6 class="footer__links-title">Legal</h6>
+              <h3 class="footer__links-title">Legal</h3>
               <ul class="footer__legal-links-list">
                 <li class="footer__links-item"><a href="#" class="footer__link">Terms</a></li>
                 <li class="footer__links-item"><a href="#" class="footer__link">Privacy</a></li>
@@ -343,9 +343,9 @@
             </div>
 
             <div class="footer__fourth-col">
-              <h6 class="footer__links-title">Art of Work newsletter</h6>
+              <h3 class="footer__links-title">Art of Work newsletter</h3>
               <p class="footer__links-text">Receive must-read articles and trends on company culture, hiring and work/life balance.</p>
-              <h6 class="footer__links-title">Social media</h6>
+              <h3 class="footer__links-title">Social media</h3>
               <ul class="footer__social-media-list">
                 <li class="footer__social-media-item">
                   <a href="#" class="footer__social-media-link">
@@ -363,11 +363,7 @@
                   </a>
                 </li>
               </ul>
-
             </div>
-            
-
-            </ul>
           </div>
 
         </div>
@@ -375,7 +371,7 @@
     </div>
     <script src="script.js"></script>
       <!-- Swiper JS -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
 
     <!-- Initialize Swiper -->
     <script src="./swiper.js"></script>

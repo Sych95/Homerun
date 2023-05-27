@@ -45,31 +45,6 @@ burgerBtn.addEventListener('click',()=>{
     }
 })
 
-
-
-  const elementList = document.querySelectorAll('section')
-  elementList.forEach((item)=>{
-    item.classList.add('hidden')
-  })
-
-  const options = {
-    root: null,
-    rootMargin: '10px',
-    threshold: 0.3
-  }
-
-  const callback = function (entries, observer){
-    entries.forEach(item =>{
-        if(item.isIntersecting){
-            item.target.classList.add('showed');
-            item.target.classList.remove('hidden')
-        }
-    })
-  }
-  let observer = new IntersectionObserver(callback, options);
-  elementList.forEach(item=>{
-    observer.observe(item)
-  })
     
 
 

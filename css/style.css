@@ -140,12 +140,6 @@ a {
 
 .intro {
   margin-bottom: 90px;
-  -webkit-animation-name: slideInDown;
-  animation-name: slideInDown;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
 }
 
 .title {
@@ -738,24 +732,21 @@ a {
   .nav-burger {
     display: none;
     position: absolute;
-    top: 200px;
+    left: calc(0% + 15.5vw);
+    top: 25vh;
+    width: 70vw;
   }
   .nav-list {
     display: flex;
-    flex-wrap: wrap;
-    flex-basis: 320px;
+    flex-direction: column;
     margin: auto;
+  }
+  .nav-list__link {
+    font-size: 30px;
+    color: #fff;
   }
   .active {
     display: flex;
-  }
-  .nav-list__item {
-    margin: auto;
-    font-size: 30px;
-  }
-  .nav-list__link {
-    font-size: 18px;
-    color: #fff;
   }
   .title {
     font-size: 50px;
@@ -935,65 +926,4 @@ a {
   .footer__social-media-list {
     justify-content: center;
   }
-  @-webkit-keyframes slideInDown {
-    0% {
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
-      visibility: visible;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-  }
-  @keyframes slideInDown {
-    0% {
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
-      visibility: visible;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-  }
-}
-.slideOutUp {
-  -webkit-animation-name: slideOutUp;
-  animation-name: slideOutUp;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes slideOutUp {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    visibility: hidden;
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-@keyframes slideOutUp {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    visibility: hidden;
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-.hidden {
-  opacity: 0;
-}
-
-.showed {
-  transition: opacity 1.5s ease;
-  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

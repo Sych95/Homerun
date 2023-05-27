@@ -32,14 +32,14 @@ const burgerNav = document.querySelector('.nav-burger');
 burgerBtn.addEventListener('click',()=>{
     if(!burgerNav.classList.contains('active')){
         burgerNav.classList.add('active');
-        burgerNav.classList.remove("slideOutUp");
-        burgerNav.classList.add("slideInDown");
+        burgerNav.classList.add('lightSpeedIn');
+        setTimeout(()=>burgerNav.classList.remove('lightSpeedIn'),700);
         burgerBtn.classList.remove('burger-off');
         burgerBtn.classList.add('burger-on')
     } else{
-        burgerNav.classList.remove("slideInDown");
-        burgerNav.classList.add("slideOutUp");
-        setTimeout(()=> burgerNav.classList.remove('active'), 900)
+        burgerNav.classList.add('lightSpeedOut')
+        setTimeout(()=> burgerNav.classList.remove('lightSpeedOut'), 700)
+        setTimeout(()=>burgerNav.classList.remove('active'), 700)
         burgerBtn.classList.remove('burger-on');
         burgerBtn.classList.add('burger-off')
     }
@@ -52,13 +52,11 @@ burgerBtn.addEventListener('click',()=>{
     item.classList.add('hidden')
   })
 
-
   const options = {
     root: null,
     rootMargin: '10px',
     threshold: 0.3
   }
-
 
   const callback = function (entries, observer){
     entries.forEach(item =>{
@@ -68,9 +66,7 @@ burgerBtn.addEventListener('click',()=>{
         }
     })
   }
-
   let observer = new IntersectionObserver(callback, options);
-
   elementList.forEach(item=>{
     observer.observe(item)
   })

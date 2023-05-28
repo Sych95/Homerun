@@ -17,9 +17,17 @@ const options = {
 }
 
 const callback = function (entries, observer){
-  entries.forEach(item =>{
+  let count = 0;
+  entries.forEach((item,index) =>{
       if(item.isIntersecting && item.target.localName === 'section'){
           item.target.classList.add('showed');
+          if(count%2 !== 0){
+            item.target.classList.add('slideInRight');
+            
+          } else {
+            item.target.classList.add('slideInLeft');
+          }
+          count++
           item.target.classList.remove('hidden');
       } else if(item.isIntersecting && item.target.localName === 'img'){
           item.target.src = item.target.getAttribute('data-src')

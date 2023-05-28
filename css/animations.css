@@ -3,9 +3,8 @@
     margin-left: 0;
   }
   .showed{
-    transition: opacity 1.5s ease, margin 2s ease;
+    transition: opacity 1.5s ease;
     opacity: 1;
-    margin: auto;
   }
 
   .lightSpeedIn {

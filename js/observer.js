@@ -1,7 +1,13 @@
 const elementList = document.querySelectorAll('section')
-const imgList = document.querySelectorAll('img');
 elementList.forEach((item)=>{
   item.classList.add('hidden')
+})
+
+const imgList = document.querySelectorAll('img');
+imgList.forEach((item)=> {
+    let src = item.getAttribute('src');
+    item.src= '';
+    item.setAttribute("data-src", src)
 })
 
 const options = {
@@ -13,11 +19,10 @@ const options = {
 const callback = function (entries, observer){
   entries.forEach(item =>{
       if(item.isIntersecting && item.target.localName === 'section'){
-          console.log(item.target.localName);
           item.target.classList.add('showed');
           item.target.classList.remove('hidden');
       } else if(item.isIntersecting && item.target.localName === 'img'){
-          console.log(item)
+          item.target.src = item.target.getAttribute('data-src')
       }
       
   })

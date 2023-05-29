@@ -42,7 +42,7 @@
   }
   .nav-burger {
     display: none;
-    position: fixed;
+    position: absolute;
     left: calc(0% + 15.5vw);
     top: 25vh;
     width: 70vw;

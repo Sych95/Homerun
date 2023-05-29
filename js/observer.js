@@ -17,22 +17,19 @@ const options = {
 }
 
 const callback = function (entries, observer){
-  let count = 0;
   entries.forEach((item,index) =>{
       if(item.isIntersecting && item.target.localName === 'section'){
           item.target.classList.add('showed');
-          if(count%2 !== 0){
-            item.target.classList.add('slideInRight');
-            
-          } else {
-            item.target.classList.add('slideInLeft');
-          }
-          count++
+
+          const currentIndex = Array.from(elementList).findIndex(elem=>{
+            return elem === item.target
+          })
+          currentIndex%2 !==0 ? item.target.classList.add('slideInRight') : item.target.classList.add('slideInLeft');
+          
           item.target.classList.remove('hidden');
       } else if(item.isIntersecting && item.target.localName === 'img'){
           item.target.src = item.target.getAttribute('data-src')
       }
-      
   })
 }
 let observer = new IntersectionObserver(callback, options);

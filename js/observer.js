@@ -24,15 +24,26 @@ const callback = function (entries, observer){
           const currentIndex = Array.from(elementList).findIndex(elem=>{
             return elem === item.target
           })
-          currentIndex%2 !==0 ? item.target.classList.add('slideInRight') : item.target.classList.add('slideInLeft');
-          
+
+          if(currentIndex%2 !== 0){
+            item.target.classList.add('slideInRight');
+            setTimeout(()=>item.target.classList.remove('slideInRight'), 2000);
+            observer.unobserve(item.target)
+          } else {
+            item.target.classList.add('slideInLeft');
+            setTimeout(()=>item.target.classList.remove('slideInLeft'), 2000);
+            observer.unobserve(item.target)
+          }
           item.target.classList.remove('hidden');
       } else if(item.isIntersecting && item.target.localName === 'img'){
           item.target.src = item.target.getAttribute('data-src')
+          observer.unobserve(item.target)
       }
   })
 }
+
 let observer = new IntersectionObserver(callback, options);
+
 elementList.forEach(item=>{
   observer.observe(item)
 })

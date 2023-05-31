@@ -14,6 +14,9 @@ const footer = document.querySelector('footer')
 
 const opportunityList = document.querySelectorAll('.opportunity');
 
+opportunityList.forEach((item)=>{
+  item.classList.add('hidden')
+})
 
 
 const options = {
@@ -45,6 +48,7 @@ const callback = function (entries, observer){
           item.target.src = item.target.getAttribute('data-src')
           observer.unobserve(item.target)
       } else if(item.isIntersecting && item.target.classList.contains('opportunity')){
+        item.target.classList.add('showed');
         item.target.classList.add('rotateInUpLeft')
         observer.unobserve(item.target)
       }

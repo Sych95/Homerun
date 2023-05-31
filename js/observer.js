@@ -10,6 +10,12 @@ imgList.forEach((item)=> {
     item.setAttribute("data-src", src)
 })
 
+const footer = document.querySelector('footer')
+
+const opportunityList = document.querySelectorAll('.opportunity');
+
+
+
 const options = {
   root: null,
   rootMargin: '10px',
@@ -22,7 +28,7 @@ const callback = function (entries, observer){
           item.target.classList.add('showed');
 
           const currentIndex = Array.from(elementList).findIndex(elem=>{
-            return elem === item.target
+            return elem === item.target;
           })
 
           if(currentIndex%2 !== 0){
@@ -33,21 +39,32 @@ const callback = function (entries, observer){
             item.target.classList.add('slideInLeft');
             setTimeout(()=>item.target.classList.remove('slideInLeft'), 2000);
             observer.unobserve(item.target)
-          }
+          } 
           item.target.classList.remove('hidden');
       } else if(item.isIntersecting && item.target.localName === 'img'){
           item.target.src = item.target.getAttribute('data-src')
           observer.unobserve(item.target)
+      } else if(item.isIntersecting && item.target.classList.contains('opportunity')){
+        item.target.classList.add('rotateInUpLeft')
+        observer.unobserve(item.target)
       }
+
   })
 }
 
 let observer = new IntersectionObserver(callback, options);
 
 elementList.forEach(item=>{
-  observer.observe(item)
+  observer.observe(item);
 })
 
 imgList.forEach((item)=>{
-  observer.observe(item)
+  observer.observe(item);
 })
+
+opportunityList.forEach((item)=>{
+  observer.observe(item);
+})
+
+observer.observe(footer)
+

@@ -12,6 +12,13 @@
   .intro {
     margin-bottom: 30px;
   }
+  .subcribe-form__btn {
+    font-size: 16px;
+    padding: 10px 10px 10px 10px;
+  }
+  .subcribe-form__input {
+    width: 247px;
+  }
   .nav {
     display: none;
   }
@@ -35,9 +42,9 @@
   }
   .nav-burger {
     display: none;
-    background-color: rgba(14, 16, 22, 0.8);
-    border-radius: 20px;
-    padding: 20px 0;
+    position: fixed;
+    left: calc(0% + 15.5vw);
+    top: 25vh;
     width: 70vw;
   }
   .nav-list {
@@ -51,10 +58,6 @@
   }
   .active {
     display: flex;
-    position: absolute;
-    z-index: 2;
-    left: calc(0% + 15.5vw);
-    top: 25vh;
   }
   .title {
     font-size: 50px;
@@ -62,13 +65,6 @@
     font-weight: 700;
     letter-spacing: 0;
     margin-bottom: 20px;
-  }
-  .subcribe-form__input {
-    width: 247px;
-  }
-  .subcribe-form__btn {
-    font-size: 16px;
-    padding: 10px 10px 10px 10px;
   }
   .team-list {
     padding: 0;
@@ -199,6 +195,11 @@
   .footer__links-container {
     flex-wrap: wrap;
     padding-bottom: 20px;
+  }
+  .nav-burger {
+    background-color: rgba(14, 16, 22, 0.8);
+    border-radius: 20px;
+    padding: 20px 0;
   }
   .footer__main-links {
     margin-bottom: 40px;
